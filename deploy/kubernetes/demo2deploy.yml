@@ -17,9 +17,10 @@ spec:
       labels:
         app: tomcat
         flux.weave.works/automated: "true"
+        flux.weave.works/tag.nginx: semver:~8.5
     spec:
       containers:
       - name: tomcat
-        image: tomcat:8.5.55-jdk11
+        image: sshaik/tomcat:8.5.55-jdk11
         ports:
         - containerPort: 8080
