@@ -4,7 +4,14 @@ metadata:
   name: tomcat
   namespace: demo2
 spec:
-  replicas: 2
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: tomcat
   template:
     metadata:
       labels:
