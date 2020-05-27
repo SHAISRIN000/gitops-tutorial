@@ -24,6 +24,6 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: sshaik/tomcat:8.5.66
+        image: sshaik/tomcat:8.5.77
         ports:
         - containerPort: 8080
