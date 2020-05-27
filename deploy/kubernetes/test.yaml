@@ -9,6 +9,7 @@ spec:
     metadata:
       labels:
         app: podinfo2
+       flux.weave.works/automated: "true"
     spec:
       containers:
       - name: podinfo2
