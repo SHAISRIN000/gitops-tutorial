@@ -2,16 +2,16 @@
 apiVersion: apps/v1beta1 # for versions before 1.6.0 use extensions/v1beta1
 kind: Deployment
 metadata:
-  name: podinfo1
+  name: podinfo2
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: podinfo1
+        app: podinfo2
     spec:
       containers:
-      - name: podinfo1
+      - name: podinfo2
         image: quay.io/stefanprodan/podinfo:3.0.0
         ports:
         - containerPort: 3000
