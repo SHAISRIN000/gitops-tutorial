@@ -1,11 +1,12 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tomcat
   namespace: demo2
   annotations:
-      fluxcd.io/automated: "true"
-      fluxcd.io/tag.tomcat: semver:~8.5
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.tomcat: semver:~8.5
 spec:
   replicas: 1
   strategy:
@@ -23,6 +24,6 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: sshaik/tomcat:8.5.55-jdk11
+        image: sshaik/tomcat:8.5.66
         ports:
         - containerPort: 8080
