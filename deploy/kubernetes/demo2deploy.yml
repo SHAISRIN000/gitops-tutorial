@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: tomcat
   namespace: demo2
+  annotations:
+      fluxcd.io/automated: "true"
+      fluxcd.io/tag.tomcat: semver:~8.5
 spec:
   replicas: 1
   strategy:
@@ -17,7 +20,6 @@ spec:
       labels:
         app: tomcat
         flux.weave.works/automated: "true"
-        flux.weave.works/tag.nginx: semver:~8.5
     spec:
       containers:
       - name: tomcat
