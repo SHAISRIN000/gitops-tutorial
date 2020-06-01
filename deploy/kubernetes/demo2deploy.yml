@@ -8,7 +8,7 @@ metadata:
     fluxcd.io/automated: "true"
     fluxcd.io/tag.tomcat: semver:~8.5
 spec:
-  replicas: 2
+  replicas: 1
   strategy:
     rollingUpdate:
       maxUnavailable: 0
